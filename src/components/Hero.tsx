@@ -85,22 +85,36 @@ export default function Hero() {
         return () => ctx.revert();
     }, []);
 
+    const collageImages = [
+        "/sarpdansh.jpg",
+        "/parv.jpg",
+        "/sicklot.jpg",
+        "/dhruvsthetick.jpg",
+        "/2raw.jpg",
+        "/navyug.jpg"
+    ];
+
     return (
         <section
             ref={heroRef}
-            className="relative min-h-screen flex items-center justify-center overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A0A0A]"
         >
-            <div
-                className="hero-bg absolute inset-0 z-0 bg-cover bg-center transform scale-[1.15]"
-                style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=2678&auto=format&fit=crop')",
-                }}
-            >
-                <div className="absolute inset-0 bg-black/70 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+            <div className="hero-bg absolute inset-0 z-0 transform scale-[1.15]">
+                {/* Collage Grid */}
+                <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 gap-[1px] bg-black/40 overflow-hidden opacity-40">
+                    {collageImages.map((src, i) => (
+                        <div key={i} className="relative w-full h-full">
+                            <img src={src} alt="Artist background" className="w-full h-full object-cover grayscale" />
+                        </div>
+                    ))}
+                </div>
+
+                {/* Overlays to ensure text pops deeply */}
+                <div className="absolute inset-0 bg-black/60 mix-blend-multiply z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-black/80 to-transparent z-10" />
             </div>
 
-            <div className="container relative z-10 px-6 mx-auto flex flex-col items-center justify-center text-center mt-20">
+            <div className="container relative z-20 px-6 mx-auto flex flex-col items-center justify-center text-center mt-20">
                 <h1 ref={textRef} className="font-display font-bold uppercase tracking-tighter text-5xl md:text-8xl lg:text-9xl leading-[0.9] flex flex-col items-center">
                     <div className="overflow-hidden">
                         <span className="hero-line block">We Don't Follow</span>
@@ -117,7 +131,7 @@ export default function Hero() {
                 </p>
             </div>
 
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce flex flex-col items-center opacity-50">
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce flex flex-col items-center opacity-50">
                 <span className="text-xs uppercase tracking-widest mb-2 font-medium">Scroll</span>
                 <div className="w-[1px] h-12 bg-white" />
             </div>
