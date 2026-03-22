@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Instagram, Twitter, Music } from "lucide-react";
+import { Instagram, Music } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +15,7 @@ const artists = [
         image: "/sarpdansh.jpg",
         fallbackImage: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=800&auto=format&fit=crop&q=60",
         spotify: "https://open.spotify.com/artist/2EnfibPipqcjvyRiNrbHTN",
+        instagram: "https://www.instagram.com/sarpdansh/",
         stats: ["200K+ Monthly Listeners", "25K+ Spotify Followers"]
     },
     {
@@ -25,6 +26,7 @@ const artists = [
         image: "/parv.jpg",
         fallbackImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=60",
         spotify: "https://open.spotify.com/artist/350WWIB7gR7evrXTWmc1pj",
+        instagram: "https://www.instagram.com/parv_music/",
         stats: ["150K+ Monthly Listeners", "12K+ IG Followers"]
     },
     {
@@ -35,6 +37,7 @@ const artists = [
         image: "/sicklot.jpg",
         fallbackImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=60",
         spotify: "https://open.spotify.com/artist/2NYWuAn8LPsebNkudbSLA6",
+        instagram: "https://www.instagram.com/sicklotmusic/",
         stats: ["100K+ Monthly Listeners", "10K+ IG Followers"]
     },
     {
@@ -45,6 +48,7 @@ const artists = [
         image: "/dhruvsthetick.jpg",
         fallbackImage: "https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=800&auto=format&fit=crop&q=60",
         spotify: "https://open.spotify.com/artist/4g8Z4if0DrwN5H83ZGpZ44",
+        instagram: "https://www.instagram.com/dhruv_sthetick/",
         stats: ["100K+ Spotify Listeners", "15K+ IG Followers"]
     },
     {
@@ -55,6 +59,7 @@ const artists = [
         image: "/2raw.jpg",
         fallbackImage: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=60",
         spotify: "https://open.spotify.com/artist/5oUQFkXemNEsbIdmZmwWmW",
+        instagram: "https://www.instagram.com/2rraaww/",
         stats: ["20K+ Spotify Listeners", "5K+ YouTube Subs"]
     },
     {
@@ -65,6 +70,7 @@ const artists = [
         image: "/navyug.jpg",
         fallbackImage: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=800&auto=format&fit=crop&q=60",
         spotify: "https://open.spotify.com/artist/4adwj9Z1zcgF7Os33tzs4Q",
+        instagram: "https://www.instagram.com/navyugmusic/",
         stats: ["110K+ Spotify Listeners", "Collabs: Ikka, MC Sq."]
     }
 ];
@@ -178,7 +184,7 @@ export default function ArtistRoster() {
                                     <a href={artist.spotify} target="_blank" rel="noopener noreferrer" className="p-3 bg-[#0A0A0A] text-accent rounded-full hover:bg-white hover:scale-110 transition-all cursor-none pointer-events-auto shadow-lg">
                                         <Music className="w-5 h-5" />
                                     </a>
-                                    <a href="#" className="p-3 bg-[#0A0A0A] text-accent rounded-full hover:bg-white hover:scale-110 transition-all cursor-none pointer-events-auto shadow-lg">
+                                    <a href={artist.instagram} target="_blank" rel="noopener noreferrer" className="p-3 bg-[#0A0A0A] text-accent rounded-full hover:bg-white hover:scale-110 transition-all cursor-none pointer-events-auto shadow-lg">
                                         <Instagram className="w-5 h-5" />
                                     </a>
                                 </div>
