@@ -164,7 +164,7 @@ export default function ArtistRoster() {
                                 />
                             </div>
 
-                            <div className="absolute inset-0 p-8 flex flex-col justify-end z-10 transition-transform duration-500 group-hover:-translate-y-full transform-gpu" style={{ transformZ: "50px" }}>
+                            <div className="absolute inset-0 p-8 flex flex-col justify-end z-10 transition-transform duration-500 group-hover:-translate-y-full transform-gpu" style={{ transform: "translateZ(50px)" }}>
                                 <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">{artist.genre}</span>
                                 <h3 className="text-4xl font-display font-bold uppercase tracking-wide">{artist.name}</h3>
                             </div>
