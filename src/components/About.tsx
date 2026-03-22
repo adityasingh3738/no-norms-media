@@ -61,14 +61,14 @@ export default function About() {
                             We <span className="text-gray-500">break</span> the mold.<br />
                             Then we <span className="text-accent max-md:text-accent" style={{ WebkitTextStroke: '1px var(--color-accent)', color: 'transparent' }}>redefine</span> it.
                         </h2>
-                        <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                            No Norms Media isn't just a management agency. We are a cultural powerhouse dedicated to amplifying the voices of those who dare to be different.
+                        <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-6">
+                            No Norms Media is a management and marketing company founded by <a href="https://www.instagram.com/asmitonweb/" target="_blank" rel="noopener noreferrer" className="text-accent font-bold hover:text-white underline decoration-accent/50 underline-offset-4 transition-colors cursor-none pointer-events-auto">Asmit</a> (Aditya Singh) in 2024. Our vision is to bring the best talent under one roof and generate the highest quality art for the people. We represent multiple genre-breaking artists rapidly dominating the top lists of Indian Hip Hop—it's about time.
                         </p>
-                        <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                            Founded on the belief that true art cannot be confined, we provide the infrastructure, strategy, and creative direction for artists to build legacy, not just hype.
+                        <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-6">
+                            As a primary marketing agency and vendor, we've executed numerous high-impact campaigns, including driving tracks like <strong className="text-white">‘Tujhko Kya Fikar’</strong> to over <span className="text-accent font-bold">15 Million+</span> streams.
                         </p>
-                        <p className="text-gray-300 text-lg leading-relaxed font-medium">
-                            We proudly collaborate and have worked with prominent artists like <span className="text-white font-bold">Badshah, Karma, Panther, Ikka, and Bella.</span>
+                        <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-medium">
+                            We also curated <strong className="text-white">‘The Takeover Tape’</strong>—a pioneering project that merges explosive underground talent with mainstream titans like <span className="text-white font-bold">Badshah, Ikka, Karma, Panther, Yungsta, Bella, Frappe Ash, Bharg, and MC Square.</span>
                         </p>
                     </div>
 
