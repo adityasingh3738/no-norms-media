@@ -45,7 +45,7 @@ export default function CustomCursor() {
                 gsap.to(cursorRing, {
                     scale: 1,
                     backgroundColor: "transparent",
-                    borderColor: "#ffffff",
+                    borderColor: "#65745a",
                     mixBlendMode: "difference",
                     duration: 0.3
                 });

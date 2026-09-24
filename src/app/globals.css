@@ -1,22 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0A0A0A;
-  --color-foreground: #F5F0EB;
-  --color-accent: #FFB300;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --color-background: #0b0c0b;
+  --color-foreground: #f4f0e8;
+  --color-accent: #f06a3d;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, sans-serif;
+  --font-display: var(--font-syne), ui-sans-serif, sans-serif;
 }
 
 :root {
-  --background: #0A0A0A;
-  --foreground: #F5F0EB;
+  --background: #0b0c0b;
+  --foreground: #f4f0e8;
+  --ink: #f4f0e8;
+  --paper: #141714;
+  --cosmic-orange: #f06a3d;
+  --suede-green: #65745a;
+  --line: rgba(244, 240, 232, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes hero-filmstrip-forward {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes hero-filmstrip-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.hero-filmstrip {
+  animation: hero-filmstrip-forward 42s linear infinite;
+  will-change: transform;
+}
+
+.hero-filmstrip-reverse {
+  animation-name: hero-filmstrip-reverse;
+  animation-duration: 48s;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  background-image: linear-gradient(rgba(244, 240, 232, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(244, 240, 232, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 /* Custom Scrollbar in Brand Accent Color */
@@ -29,15 +72,34 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-accent);
-  border-radius: 4px;
+  background: var(--suede-green);
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E5A100;
+  background: var(--cosmic-orange);
 }
 
 .hide-cursor,
 .hide-cursor * {
   cursor: none !important;
+}
+
+.artist-dialog,
+.artist-dialog * {
+  cursor: auto !important;
+}
+
+::selection {
+  color: var(--ink);
+  background: var(--cosmic-orange);
+}
+
+.section-kicker {
+  color: var(--suede-green);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }

@@ -37,11 +37,12 @@ export default function Services() {
     }, []);
 
     return (
-        <section id="services" ref={sectionRef} className="py-24 md:py-32 bg-background text-foreground relative z-10">
+        <section id="services" ref={sectionRef} className="py-24 md:py-32 bg-[#0b0c0b] text-[#f4f0e8] relative z-10">
             <div className="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-16">
                 <div className="lg:w-1/3">
-                    <h2 className="text-4xl md:text-5xl font-display font-bold uppercase tracking-tighter mb-6">What We <span className="text-accent">Do</span></h2>
-                    <p className="text-gray-400 text-lg leading-relaxed">
+                    <p className="section-kicker mb-4">03 / The offering</p>
+                    <h2 className="text-4xl md:text-5xl font-display font-bold uppercase tracking-tighter mb-6">What We <span className="text-[#f06a3d]">Do</span></h2>
+                    <p className="text-[#f4f0e8]/60 text-lg leading-relaxed">
                         We don't offer standard packages. Every artist receives a bespoke blueprint designed to break through the noise and build sustainable cultural impact.
                     </p>
                 </div>
@@ -50,21 +51,21 @@ export default function Services() {
                     {services.map((service) => (
                         <div
                             key={service.id}
-                            className={`service-item border-b border-white/10 overflow-hidden transition-all duration-500 ${activeId === service.id ? 'pb-8' : 'pb-4'}`}
+                            className={`service-item border-b border-white/15 overflow-hidden transition-all duration-500 ${activeId === service.id ? 'pb-8' : 'pb-4'}`}
                         >
                             <button
                                 className="w-full flex items-center justify-between text-left py-4 focus:outline-none group cursor-none"
                                 onClick={() => setActiveId(activeId === service.id ? null : service.id)}
                             >
                                 <div className="flex items-center gap-6">
-                                    <div className={`p-4 rounded-full transition-colors duration-300 ${activeId === service.id ? 'bg-accent text-[#0A0A0A]' : 'bg-[#111] text-gray-400 group-hover:text-white group-hover:bg-[#222]'}`}>
+                                    <div className={`p-4 rounded-none transition-colors duration-300 ${activeId === service.id ? 'bg-[#f06a3d] text-[#1b1b18]' : 'bg-[#1b1b18] text-[#f06a3d] group-hover:text-white group-hover:bg-[#65745a]'}`}>
                                         {service.icon}
                                     </div>
-                                    <h3 className={`text-2xl md:text-3xl font-display font-bold uppercase transition-colors duration-300 ${activeId === service.id ? 'text-white' : 'text-gray-500 group-hover:text-gray-300'}`}>
+                                        <h3 className={`text-2xl md:text-3xl font-display font-bold uppercase transition-colors duration-300 ${activeId === service.id ? 'text-[#f4f0e8]' : 'text-[#f4f0e8]/45 group-hover:text-[#65745a]'}`}>
                                         {service.title}
                                     </h3>
                                 </div>
-                                <div className={`text-accent transform transition-transform duration-300 text-xl ${activeId === service.id ? 'rotate-180' : ''}`}>
+                                <div className={`text-[#65745a] transform transition-transform duration-300 text-xl ${activeId === service.id ? 'rotate-180' : ''}`}>
                                     ▼
                                 </div>
                             </button>
@@ -73,7 +74,7 @@ export default function Services() {
                                 className={`grid transition-all duration-500 ease-in-out pl-[72px] md:pl-[88px] ${activeId === service.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
                             >
                                 <div className="overflow-hidden">
-                                    <p className="text-gray-400 text-lg leading-relaxed pt-2">
+                                    <p className="text-[#f4f0e8]/60 text-lg leading-relaxed pt-2">
                                         {service.desc}
                                     </p>
                                 </div>
